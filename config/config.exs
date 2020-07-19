@@ -12,8 +12,8 @@ config :website,
 
 # Configures the endpoint
 config :website, WebsiteWeb.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "QjniCuHdc0y4VOCo29VpiYMUHpiYidFmB4HOMyd1huGnv87A51ZkDOinDt/AImkK",
+  url: [host: "julienurraca.com"],
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: WebsiteWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Website.PubSub, adapter: Phoenix.PubSub.PG2]
 
