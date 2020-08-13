@@ -9,8 +9,15 @@ import Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
 config :website, WebsiteWeb.Endpoint,
-  http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [scheme: "https", host: "julienurraca.com", port: 443],
+  http: [port: {:system, "PORT"}],
+  url: [host: "julienurraca.com"],
+  https: [
+    port: 8443,
+    cipher_suite: :strong,
+    otp_app: :website,
+    keyfile: System.get_env("KEYFILE"),
+    certfile: System.get_env("BUNDLE")
+  ],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
