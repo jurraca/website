@@ -17,7 +17,7 @@ config :website, WebsiteWeb.Endpoint,
     cipher_suite: :strong,
     otp_app: :website,
     keyfile: System.get_env("KEYFILE"),
-    certfile: System.get_env("BUNDLE") 
+    certfile: System.get_env("BUNDLE")
   ],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
@@ -69,11 +69,11 @@ config :logger, level: :info
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
 #
-    config :website, WebsiteWeb.Endpoint, server: true
+config :website, WebsiteWeb.Endpoint, server: true
 #
 # Note you can't rely on `System.get_env/1` when using releases.
 # See the releases documentation accordingly.
 
 # Finally import the config/prod.secret.exs which should be versioned
 # separately.
-#import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
