@@ -10,16 +10,16 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :website, WebsiteWeb.Endpoint,
-  http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [scheme: "https", host: "julienurraca.com", port: 443],
+  http: [port: {:system, "PORT"}],
+  url: [host: "julienurraca.com"],
   https: [
-    :inet6,
-    port: 443,
+    port: 8443,
     cipher_suite: :strong,
-    keyfile: System.get_env(),
-    certfile: System.get_env()
+    otp_app: :website,
+    keyfile: System.get_env("KEYFILE"),
+    certfile: System.get_env("BUNDLE") 
   ],
-  force_ssl: [hsts: true],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
