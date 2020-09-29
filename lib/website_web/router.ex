@@ -13,5 +13,6 @@ defmodule WebsiteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/writing", PageController, :writing
   end
 end
