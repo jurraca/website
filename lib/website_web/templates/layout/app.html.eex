@@ -9,7 +9,7 @@
   </head>
   <body>
     <canvas class="background">
-        <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
     </canvas>
     <main>
       <%= @inner_content %>

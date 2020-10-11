@@ -1,5 +1,5 @@
 <section class="writing">
     <div>
-        <%= Website.Posts.get() |> List.first() |> Phoenix.HTML.raw() %>
+        <%= Website.Posts.get() |> List.first() %>
     </div>
 </section>
