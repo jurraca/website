@@ -1,5 +1,5 @@
-<section>
-       <p> THIS IS A TEST </p>
-
-
+<section class="writing">
+    <div>
+        <%= Website.Posts.get() |> List.first() |> Phoenix.HTML.raw() %>
+    </div>
 </section>

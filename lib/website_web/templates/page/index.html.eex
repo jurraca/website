@@ -1,5 +1,25 @@
 <div class="menu">
-  <a href="<%= Routes.page_path(@conn, :writing) %>">
-    Writing
-  </a>
+<table>
+  <tr>
+    <td>
+      <a href="">
+        <b> Work </b>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/jurraca">
+        <b> Github </b>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <a href="<%= Routes.page_path(@conn, :writing) %>">
+      <b> Writing </b>
+    </a>
+    </td>
+  </tr>
+</table>
 </div>

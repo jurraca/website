@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
+  background-size: cover;
 }
 
 .background {
@@ -17,11 +18,38 @@ body {
   z-index: 0;
 }
 
-.menu {
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  position: relative;
   z-index: 1;
+  border: 1px solid whitesmoke;
+  width: 10%;
+  align-items: center;
+}
+
+.menu, td {
+  text-align: center;
+}
+
+.menu, td, a {
+  color: whitesmoke;
 }
 
 .writing {
   background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+  margin: 15%;
+  justify-content: center;
+  align-items: center;
+
 }
