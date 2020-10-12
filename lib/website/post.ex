@@ -23,12 +23,6 @@ defmodule Website.Post do
         |> String.split(~r/#\w*/)
     end
 
-    def get() do
-        "assets/static/content"
-        |> File.ls!()
-        |> Enum.map(&load/1)
-    end
-
     def load(file) do
         "priv/static/content/" <> file
         |> File.read!()

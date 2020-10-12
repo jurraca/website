@@ -46,6 +46,16 @@ main {
   color: whitesmoke;
 }
 
+.menu-writing {
+  position: relative;
+  z-index: 1;
+  border: 1px solid whitesmoke;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+}
+
 .writing {
   background-color: black;
   color: white;
@@ -54,5 +64,4 @@ main {
   margin: 15%;
   justify-content: center;
   align-items: center;
-
 }

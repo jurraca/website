@@ -1,5 +1,11 @@
-<section class="writing">
-    <div>
-        <%= Website.Posts.get() |> List.first() %>
+<section>
+    <div class="menu-writing">
+        <table>
+            <tr>
+                <td>
+                    <%= Website.Crawler.crawl_titles() %>
+                </td>
+            </tr>
+        </table>
     </div>
 </section>
