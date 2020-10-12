@@ -1,6 +1,9 @@
 /* This file is for your main application css. */
 
 @import "./phoenix.css";
+@import url('https://rsms.me/inter/inter.css');
+
+html { font-family: 'Inter', sans-serif; }
 
 html,
 body {
