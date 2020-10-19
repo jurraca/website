@@ -16,6 +16,6 @@ defmodule WebsiteWeb.Router do
     get "/writing", PageController, :writing
     get "/work", PageController, :work
 
-    get "/:title", PostController, :show
+    get "/:slug", PostController, :show
   end
 end

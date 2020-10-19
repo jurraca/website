@@ -5,11 +5,14 @@
 </div>
 <section>
     <div class="menu-writing">
-        <%= for post <- @posts do %>
-            <article>
-                <h2><%= post.title %></h2>
-                <p><a href="<%= Routes.post_path(@conn, :show, post) %>">Read post</a></p>
-            </article>
-        <% end %>
+        <table>
+            <%= for post <- @posts do %>
+                <tr>
+                    <td>
+                        <a href="<%= Routes.post_path(@conn, :show, post) %>"><%= post.title %></a>
+                    </td>
+                </tr>
+            <% end %>
+        </table>
     </div>
 </section>
