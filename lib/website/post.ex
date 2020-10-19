@@ -1,16 +1,22 @@
 defmodule Website.Post do
-    defstruct title: "", date: "", byline: "", content: ""
+    defstruct id: "", title: "", date: "", byline: "", content: ""
 
     def compile(file) do
         %Website.Post{
-            title: file_to_title(file),
+            id: get_slug(file),
+            title: get_title(file),
             content: load(file)
         }
     end
 
-    def file_to_title(file) do
+    def get_slug(file) do
         file
         |> String.replace(~r/\.md$/, "")
+    end
+
+    def get_title(file) do
+        file
+        |> get_slug()
         |> String.replace("_", " ")
         |> String.split()
         |> Enum.map(fn x -> String.capitalize(x) end)

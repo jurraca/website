@@ -5,12 +5,11 @@
 </div>
 <section>
     <div class="menu-writing">
-        <table>
-            <tr>
-                <td>
-                    <%= Website.Crawler.crawl_titles() %>
-                </td>
-            </tr>
-        </table>
+        <%= for post <- @posts do %>
+            <article>
+                <h2><%= post.title %></h2>
+                <p><a href="<%= Routes.post_path(@conn, :show, post) %>">Read post</a></p>
+            </article>
+        <% end %>
     </div>
 </section>

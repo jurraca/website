@@ -6,7 +6,8 @@ defmodule WebsiteWeb.PageController do
   end
 
   def writing(conn, _params) do
-    render(conn, "writing.html")
+    posts = Website.Crawler.run()
+    render(conn, "writing.html", posts: posts)
   end
 
   def work(conn, _params) do

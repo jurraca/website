@@ -1,12 +1,18 @@
 defmodule Website.Crawler do
 
-    def crawl do
-        File.ls!("priv/static/content")
+    def run do
+        "priv/static/content"
+        |> File.ls!()
         |> Enum.map(&Website.Post.compile/1)
     end
 
     def crawl_titles() do
-        crawl
+        run()
         |> Enum.map(fn x -> x.title end)
     end
+
+    #def make_links(title_list) do
+    #    title_list
+    #    |> Enum.map(title, Phoenix.HTML.link(title, to: "/" <> title))
+    #end
 end
