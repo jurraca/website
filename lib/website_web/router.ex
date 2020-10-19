@@ -14,5 +14,6 @@ defmodule WebsiteWeb.Router do
 
     get "/", PageController, :index
     get "/writing", PageController, :writing
+    get "/work", PageController, :work
   end
 end

@@ -50,9 +50,7 @@ main {
   position: relative;
   z-index: 1;
   border: 1px solid whitesmoke;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  width: 150%;
   padding: 10%;
 }
 
@@ -64,4 +62,19 @@ main {
   margin: 15%;
   justify-content: center;
   align-items: center;
+}
+
+.page-header {
+  color: whitesmoke;
+  font-size: 30px;
+  display: flex;
+  position: absolute;
+  border: 1px solid whitesmoke;
+  left: 5%;
+  top: 5%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+
 }
