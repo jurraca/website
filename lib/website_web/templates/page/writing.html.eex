@@ -4,7 +4,7 @@
 </b>
 </div>
 <section>
-    <div class="menu-writing">
+    <div class="menu">
         <table>
             <%= for post <- @posts do %>
                 <tr>

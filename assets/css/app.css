@@ -21,29 +21,27 @@ body {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   display: block;
   top: 0;
   left: 0;
   z-index: 0;
-  background-attachment: fixed;
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
+  margin: 0;
 }
 
 .menu {
-  position: relative;
+  position: absolute;
   z-index: 1;
   border: 1px solid whitesmoke;
-  width: 10%;
+  margin: auto;
+  width: 15%;
+  top: 33%;
+  left: 45%;
   font-weight: inherit;
+  overflow: auto;
 }
 
 .menu, td {
@@ -54,32 +52,29 @@ main {
   color: whitesmoke;
 }
 
-.menu-writing {
-  position: relative;
-  z-index: 1;
-  border: 1px solid whitesmoke;
-  width: 150%;
-  padding: 10%;
-}
-
 .post {
   background-color: black;
   color: white;
-  display: flex;
   position: absolute;
   text-align: justify;
   text-justify: inter-word;
   font-size: 1.6em;
   font-weight: 400;
-  right: 20%;
-  left: 20%;
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  overflow: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .page-header {
   color: whitesmoke;
   font-size: 30px;
   display: flex;
-  position: absolute;
+  position: relative;
   left: 2%;
   top: 5%;
   padding-top: 10px;
