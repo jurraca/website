@@ -1,6 +1,7 @@
     <div class="post">
             <section>
                 <h1><%= @post.title %> </h1>
+                <h4><%= @post.date %></h4>
                 <p>
                     <%= @post.content %>
                 </p>

@@ -10,9 +10,4 @@ defmodule Website.Crawler do
         run()
         |> Enum.map(fn x -> x.title end)
     end
-
-    #def make_links(title_list) do
-    #    title_list
-    #    |> Enum.map(title, Phoenix.HTML.link(title, to: "/" <> title))
-    #end
 end

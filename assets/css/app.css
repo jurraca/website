@@ -18,6 +18,8 @@ body {
   background-size: cover;
   width: 100%;
   height: 100%;
+  padding-bottom: 10%;
+
 }
 
 .background {
@@ -50,15 +52,16 @@ main {
 
 .menu, td, a {
   color: whitesmoke;
+  font-size: 1.2;
 }
 
 .post {
   background-color: black;
-  color: white;
+  color: whitesmoke;
   position: absolute;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 400;
   margin-top: 5%;
   margin-left: 15%;

@@ -1,38 +1,45 @@
 defmodule Website.Post do
-    defstruct id: "", title: "", date: "", byline: "", content: ""
+    defstruct id: "", title: "", date: "", byline: "", content: "", tags: []
 
     def compile(file) do
-        %Website.Post{
-            id: get_slug(file),
-            title: get_title(file),
-            content: load(file)
+        post = %Website.Post{
+            id: get_slug(file)
         }
+
+        "priv/static/content/" <> file
+        |> File.read!()
+        |> split()
+        |> extract(post)
     end
 
     def get_slug(file) do
-        file
-        |> String.replace(~r/\.md$/, "")
+        String.replace(file, ~r/\.md$/, "")
     end
 
-    def get_title(file) do
-        file
-        |> get_slug()
-        |> String.replace("_", " ")
-        |> String.split()
-        |> Enum.map(fn x -> String.capitalize(x) end)
-        |> Enum.join(" ")
+    def split(data) do
+        [frontmatter, markdown] = String.split(data, ~r/\n-{3,}\n/, parts: 2)
+        {parse_yaml(frontmatter), Earmark.as_html!(markdown)}
+      end
+
+    defp parse_yaml(yaml) do
+      [parsed] = :yamerl_constr.string(yaml)
+      parsed
     end
 
-    def get_tags(file) do
-        file
-        |> File.read!()
-        |> String.split(~r/#\w*/)
+    def get_prop(props, key) do
+      case :proplists.get_value(String.to_charlist(key), props) do
+        :undefined -> nil
+        x -> to_string(x)
+      end
     end
 
-    def load(file) do
-        "priv/static/content/" <> file
-        |> File.read!()
-        |> Earmark.as_html!()
-        |> Phoenix.HTML.raw()
+    def extract({props, content}, post) do
+      %{post |
+        title: get_prop(props, "title"),
+        date: get_prop(props, "date"),
+        byline: get_prop(props, "byline"),
+        content: Phoenix.HTML.raw(content),
+        tags: get_prop(props, "tags")
+    }
     end
 end
