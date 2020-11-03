@@ -1,8 +1,8 @@
 ---
-title: "A Taiji Primer"
-date: 2020-04-01
-byline: "Taiji as self-care"
-
+title: "Bitcoin & the Order of Malta"
+date: 2018-10-09
+byline: "Malta is the first nation-state to vocally and fully support the exploration of cryptocurrencies and blockchains."
+tags: ["bitcoin"]
 ---
 Malta is the first nation-state to vocally and fully support the exploration of cryptocurrencies and blockchains. Joseph Muscat, the island's Prime Minister, gave [a speech](https://www.coindesk.com/maltas-prime-minister-hails-crypto-as-future-of-money-in-un-speech) at the UN last week where he told the General Assembly: “Blockchain makes cryptocurrencies the inevitable future of money, more transparent since it helps filter good businesses from bad businesses.” The Assembly will shrug off the PM's splash, but this emphatic stance makes sense--and tells us something important about Bitcoin's future--if you understand that Malta has lived symbiotically with the longest-lived stateless nation in the world: the Sovereign Military Order of Malta (whose full name reads: Sovereign Military Hospitaller Order of Saint John of Jerusalem, of Rhodes and of Malta). I'll just call them the Order.
 

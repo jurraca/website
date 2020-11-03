@@ -10,6 +10,7 @@
                 <tr>
                     <td>
                         <a href="<%= Routes.post_path(@conn, :show, post) %>"><%= post.title %></a>
+                        <span>  |  <%= post.date %> </span>
                     </td>
                 </tr>
             <% end %>
