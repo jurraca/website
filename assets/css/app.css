@@ -37,13 +37,14 @@ main {
 .menu {
   position: absolute;
   z-index: 1;
-  border: 1px solid whitesmoke;
+  border: 3px solid whitesmoke;
   margin: auto;
-  width: 15%;
+  width: 18%;
   top: 33%;
   left: 45%;
-  font-weight: inherit;
+  font-weight: bolder;
   overflow: auto;
+  line-height: 2.5;
 }
 
 .menu, td {
@@ -54,6 +55,8 @@ main {
   color: whitesmoke;
   font-size: 1.2;
 }
+
+tr:hover {background-color: #33305ce5;}
 
 .post {
   background-color: black;
