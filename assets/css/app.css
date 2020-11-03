@@ -76,6 +76,10 @@ tr:hover {background-color: #14122ce5;}
   padding-right: 10%;
 }
 
+blockquote {
+  font-size: smaller;
+}
+
 .page-header {
   color: whitesmoke;
   font-size: 30px;
