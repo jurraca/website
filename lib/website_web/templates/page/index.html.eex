@@ -1,25 +1,27 @@
-<div class="menu">
-<table>
-  <tr>
-    <td>
-      <a href="<%= Routes.page_path(@conn, :work) %>">
-        <b> Work </b>
+<div class="outer">
+  <div class="menu">
+  <table>
+    <tr>
+      <td>
+        <a href="<%= Routes.page_path(@conn, :work) %>">
+          <b> Work </b>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/jurraca">
+          <b> Github </b>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <a href="<%= Routes.page_path(@conn, :writing) %>">
+        <b> Writing </b>
       </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/jurraca">
-        <b> Github </b>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <a href="<%= Routes.page_path(@conn, :writing) %>">
-      <b> Writing </b>
-    </a>
-    </td>
-  </tr>
-</table>
+      </td>
+    </tr>
+  </table>
+  </div>
 </div>

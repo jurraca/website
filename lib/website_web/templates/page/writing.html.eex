@@ -3,7 +3,7 @@
     Writing
 </b>
 </div>
-<section>
+<section class="outer">
     <div class="menu">
         <table>
             <%= for post <- @posts do %>
