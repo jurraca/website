@@ -6,7 +6,7 @@ defmodule Website.Post do
             id: get_slug(file)
         }
 
-        "priv/static/content/" <> file
+        "priv/static/content/posts/" <> file
         |> File.read!()
         |> split()
         |> extract(post)

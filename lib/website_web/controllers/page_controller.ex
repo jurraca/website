@@ -11,6 +11,11 @@ defmodule WebsiteWeb.PageController do
   end
 
   def work(conn, _params) do
-    render(conn, "work.html")
+    text = "priv/static/content/other/work_blurb.md"
+      |> File.read!()
+      |> Earmark.as_html!()
+      |> Phoenix.HTML.raw()
+
+    render(conn, "work.html", text: text)
   end
 end

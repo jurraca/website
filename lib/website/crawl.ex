@@ -1,7 +1,7 @@
 defmodule Website.Crawler do
 
     def run do
-        "priv/static/content"
+        "priv/static/content/posts"
         |> File.ls!()
         |> Enum.map(&Website.Post.compile/1)
         |> Enum.sort(fn a, b -> a.date > b.date end)

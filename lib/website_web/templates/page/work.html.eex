@@ -1,7 +1,6 @@
-<div>
-<b class="page-header">
-    Work
-</b>
-</div>
 <section>
+    <div class="post" style="width:70%">
+        <div class="blurb">
+            <%= @text %>
+        </div>
 </section>
