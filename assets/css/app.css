@@ -19,7 +19,6 @@ body {
   width: 100%;
   height: 100%;
   padding-bottom: 10%;
-
 }
 
 .background {
@@ -28,6 +27,10 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+a {
+  color: rgb(111, 69, 145);
 }
 
 main {
@@ -51,7 +54,7 @@ main {
   text-align: center;
 }
 
-.menu, td, a {
+.menu, td {
   color: whitesmoke;
   font-size: 1.2;
 }
@@ -64,7 +67,7 @@ tr:hover {background-color: #14122ce5;}
   position: absolute;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 400;
   margin-top: 5%;
   margin-left: 15%;
