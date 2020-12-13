@@ -42,25 +42,27 @@ main {
 }
 
 .menu {
-  position: absolute;
+  position: relative;
   display: inline-block;
   z-index: 1;
   border: 3px solid whitesmoke;
   margin: 0 auto;
+  margin-top: 15%;
   width: 350px;
-  top: 22%;
   font-weight: bolder;
   overflow: auto;
   line-height: 2.5;
 }
 
 .outer {
-  width: 75%;
+  width: 100%;
   text-align: center;
 }
 
 section.outer > div.menu {
   width: 600px;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 .menu, td {
