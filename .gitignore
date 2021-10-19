@@ -29,6 +29,10 @@ npm-debug.log
 /assets/node_modules/
 /assets/static/content/
 
+.envrc
+nodemodules/
+.nix-mix 
+
 # Since we are building assets from assets/,
 # we ignore priv/static. You may want to comment
 # this depending on your deployment strategy.
