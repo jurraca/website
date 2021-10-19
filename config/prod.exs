@@ -10,7 +10,6 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 config :website, WebsiteWeb.Endpoint,
-  http: [port: {:system, "PORT"}],
   url: [host: "julienurraca.com"],
   https: [
     port: 8443,
