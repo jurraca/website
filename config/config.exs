@@ -24,7 +24,7 @@ config :website, WebsiteWeb.Endpoint,
   url: [host: "julienurraca.com"],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: WebsiteWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Website.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Website.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

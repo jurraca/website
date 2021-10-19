@@ -11,7 +11,8 @@ defmodule Website.Application do
       # Start the Ecto repository
       # Website.Repo,
       # Start the endpoint when the application starts
-      WebsiteWeb.Endpoint
+      WebsiteWeb.Endpoint,
+      {Phoenix.PubSub, [name: Website.PubSub, adapter: Phoenix.PubSub.PG2]}
       # Starts a worker by calling: Website.Worker.start_link(arg)
       # {Website.Worker, arg},
     ]
