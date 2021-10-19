@@ -13,9 +13,9 @@ defmodule WebsiteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/writing", PageController, :writing
-    get "/work", PageController, :work
+    #get "/writing", PageController, :writing
+    #get "/work", PageController, :work
 
-    get "/:slug", PostController, :show
+    #get "/:slug", PostController, :show
   end
 end

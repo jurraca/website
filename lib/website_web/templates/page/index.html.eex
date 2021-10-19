@@ -3,9 +3,6 @@
   <table>
     <tr>
       <td>
-        <a href="<%= Routes.page_path(@conn, :work) %>">
-          <b> Work </b>
-        </a>
       </td>
     </tr>
     <tr>
@@ -17,9 +14,6 @@
     </tr>
     <tr>
       <td>
-      <a href="<%= Routes.page_path(@conn, :writing) %>">
-        <b> Writing </b>
-      </a>
       </td>
     </tr>
   </table>
