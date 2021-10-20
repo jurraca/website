@@ -25,6 +25,11 @@
           src = ./.;
           version = "0.0.0";
           RELEASE_DISTRIBUTION = "none";
+          
+          postBuild = ''
+            mix do deps.loadpaths --no-deps-check
+            mix assets.deploy
+          '';
          };
     };
     in utils.lib.eachDefaultSystem (system: rec {
@@ -45,7 +50,7 @@
           db_name = "db_test";
           MIX_ENV = "test";
         };
-          prod = import ./shell.nix {
+        prod = import ./shell.nix {
           pkgs = legacyPackages;
           db_name = "db_prod";
           MIX_ENV = "prod";

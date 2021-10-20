@@ -45,6 +45,13 @@ main {
   margin: 0;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 49%;
+  padding: 1rem;
+}
+
 .menu {
   position: relative;
   display: inline-block;

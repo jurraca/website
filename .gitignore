@@ -30,7 +30,7 @@ npm-debug.log
 /assets/static/content/
 
 .envrc
-nodemodules/
+/nodemodules
 .nix-mix 
 
 # Since we are building assets from assets/,
