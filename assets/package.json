@@ -11,7 +11,7 @@
     "autoprefixer": "^10.2.1",
     "particles.js": "^2.0.0",
     "particlesjs": "^2.2.3",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.10",
     "postcss-loader": "^4.1.0",
     "tailwindcss": "^2.0.2"
   },
