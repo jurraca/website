@@ -18,9 +18,10 @@
       website = with final;
         let
           beamPackages = beam.packagesWith beam.interpreters.erlangR24; 
-          mixNixDeps = import ./deps.nix { inherit lib beamPackages; }; 
+          mixNixDeps = import ./deps.nix { inherit lib beamPackages; };
+          npm = nodePackages.npm;
         in beamPackages.mixRelease {
-          inherit mixNixDeps;
+          inherit mixNixDeps npm;
           pname = "website";
           src = ./.;
           version = "0.0.0";
@@ -28,6 +29,7 @@
           
           postBuild = ''
             mix do deps.loadpaths --no-deps-check
+
             mix assets.deploy
           '';
          };

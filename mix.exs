@@ -48,7 +48,8 @@ defmodule Website.MixProject do
         {:jason, "~> 1.2"},
         {:plug_cowboy, "~> 2.5"},
         {:earmark, "~> 1.4.0"},
-        {:yamerl, "~> 0.8.1"}
+        {:yamerl, "~> 0.8.1"},
+        {:tailwind, "~> 0.1", runtime: Mix.env() == :dev}
     ]
   end
 
@@ -63,11 +64,7 @@ defmodule Website.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate", "test"],
-      "assets.deploy": [
-        "cmd --cd assets npm run deploy",
-        "esbuild default --minify",
-        "phx.digest"
-      ]
+      "assets.deploy": ["esbuild default --minify", "tailwind default --minify", "phx.digest"]
     ]
   end
 end

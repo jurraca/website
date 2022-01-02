@@ -9,7 +9,6 @@ import Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
 config :website, WebsiteWeb.Endpoint,
-  http: [port: {:system, "PORT"} || 4000],
   url: [host: "julienurraca.com"],
   https: [
     port: 8443,

@@ -515,6 +515,19 @@ let
       beamDeps = [ cowboy hackney jason mime plug_cowboy telemetry ];
     };
 
+    tailwind = buildMix rec {
+      name = "tailwind";
+      version = "0.1.2";
+
+      src = fetchHex {
+        pkg = "${name}";
+        version = "${version}";
+        sha256 = "02ljpjrsdxi4w5pk8zsks7n220l5y43r89a6yl7qza1i959b73zg";
+      };
+
+      beamDeps = [ castore ];
+    };
+
     telemetry = buildRebar3 rec {
       name = "telemetry";
       version = "1.0.0";
